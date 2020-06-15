@@ -5,10 +5,12 @@
   </head>
   <body>
     <ul class="news-view view">
-      {% for item in list %}
-        <li class="item">
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        </li>
+      {% for item in results %}
+      {% for itm in item.weather_data %}
+      <li>  
+        {{ itm.weather }}
+      </li>
+      {% endfor %}
       {% endfor %}
     </ul>
   </body>

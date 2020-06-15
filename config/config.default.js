@@ -28,6 +28,20 @@ module.exports = appInfo => {
       '.tpl': 'nunjucks',
     },
   };
+  config.news = {
+    pageSize: 5,
+    serverUrl: 'https://hacker-news.firebaseio.com/v0',
+  };
+
+  config.middleware = [
+    'robot'
+  ];
+
+  config.robot = {
+    ua: [
+      /Baiduspider/i,
+    ]
+  };
 
   return {
     ...config,
